@@ -1,8 +1,15 @@
 // =================================================
 // CONFIGURAÇÃO DO SERVIDOR
 // =================================================
-const WS_SERVER = 'wss://steal-a-lobo.onrender.com';
-const socket = new WebSocket(WS_SERVER);
+
+
+// Conexão WebSocket segura
+const socket = new WebSocket('wss://steal-a-lobo.onrender.com');
+
+socket.onopen = () => console.log('Conectado ao servidor!');
+socket.onmessage = (msg) => console.log('Recebi:', msg.data);
+socket.onclose = () => console.log('Desconectou do servidor!');
+
 
 let PLAYER_ID = null; // será definido após login/criação
 let CURRENT_ROOM = null; 
