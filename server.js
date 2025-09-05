@@ -1,6 +1,8 @@
 const express = require('express');
 const http = require('http');
 const WebSocket = require('ws');
+const wss = new WebSocket.Server({ server }); // server é o HTTP criado pelo express
+
 const path = require('path');
 
 const app = express();
@@ -31,5 +33,6 @@ wss.on('connection', (ws) => {
 });
 
 server.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
+
 
 
