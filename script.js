@@ -1,7 +1,7 @@
 // =================================================
 // CONFIGURAÇÃO DO SERVIDOR
 // =================================================
-const WS_SERVER = 'https://steal-a-lobo.onrender.com'; // substitua pelo seu URL no Render
+const WS_SERVER = 'wss://steal-a-lobo.onrender.com';
 const socket = new WebSocket(WS_SERVER);
 
 let PLAYER_ID = null; // será definido após login/criação
